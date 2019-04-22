@@ -47,7 +47,7 @@ So if you don't have good setup already, here are a couple of my experiences tha
 The downside being of course the lack of the features most of the big IDEs come with nowadays.
 *    [CLion](https://www.jetbrains.com/clion/): I use JetBrain products for a lot of my coding activities, but CLion didn't work well for me, especially following references. Of course this might be due to setup issues.
 *    [Eclipse](https://www.eclipse.org/): I haven't used it in a while, but this turned out to be a good option. Unfortunately, it takes a lot of resources for the indexer to run through the code.
-     * [Here](https://chromium.googlesource.com/chromium/src/+/master/docs/linux_eclipse_dev.md) is a setup description for the Chromium-Project, but it works similiarily for the other projects as well.
+     * [Here](https://chromium.googlesource.com/chromium/src/+/master/docs/linux_eclipse_dev.md) is a setup description for the Chromium-Project, but it works similarly for the other projects as well.
 *    [ccls](https://github.com/MaskRay/ccls)+[VSCode](https://code.visualstudio.com/) This is the best option for me so far. ccls is very fast with indexing the repos and works great with VSCode. You can also combine it with other editors and IDEs see https://github.com/MaskRay/ccls/wiki/Editor-Configuration
 
 ## Chromium (Blink)
@@ -100,6 +100,10 @@ Articles:
 [Blog](https://v8.dev/blog/turbofan-jit)
 
 V8 provides a visualization for TurboFan called [Turbolizer](https://github.com/v8/v8/tree/master/tools/turbolizer)
+
+Articles:
+
+* [Introduction to TurboFan](https://doar-e.github.io/blog/2019/01/28/introduction-to-turbofan/)
 
 ##### Turbolizer usage:
 1.    Run v8 with `--trace-turbo`: `d8 --trace-turbo foo.js`
@@ -260,7 +264,16 @@ $ out/Debug/ch
     *   [Files](https://abiondo.me/assets/ctf/35c3/krautflare-33ce1021f2353607a9d4cc0af02b0b28.tar)
     *   [WriteUp](https://abiondo.me/2019/01/02/exploiting-math-expm1-v8/)
     *   [WriteUp](https://www.jaybosamiya.com/blog/2019/01/02/krautflare/)
-        
+* CSAW-Finals-2018: ES1337
+     *  [Files+WriteUp](https://github.com/osirislab/CSAW-CTF-2018-Finals/tree/master/pwn/ES1337)
+* Plaid CTF 2018: Roll a dice
+     *  [Files](https://github.com/m1ghtym0/write-ups/tree/master/browser/plaid-2018-roll-a-dice)
+     *  [WriteUp](https://gist.github.com/saelo/52985fe415ca576c94fc3f1975dbe837)
+     *  [WriteUp](https://ctftime.org/writeup/9999)
+* Google CTF Finals 2018: Just In Time
+     *  [Files+WriteUp](https://github.com/google/google-ctf/tree/master/2018/finals/pwn-just-in-time)
+     *  [Slides](https://github.com/google/google-ctf/blob/master/2018/finals/solutions.pdf)
+     *  [WriteUp](https://xz.aliyun.com/t/3348)
                 
 ### RealWorld
 * [MobilePwn2Own 2013 - Chrome on Android](https://docs.google.com/document/d/1tHElG04AJR5OR2Ex-m_Jsmc8S5fAbRB3s4RmTG_PFnw/edit)
@@ -272,34 +285,50 @@ $ out/Debug/ch
 
 
 ## Firefox Pwn
+### Articles
+
+* [Playing around with SpiderMonkey](https://vigneshsrao.github.io/play-with-spidermonkey/)
+* [OR'LYEH? The Shadow over Firefox](http://www.phrack.org/issues/69/14.html)
+
 ### CTF-Challenges
 * 33c3: Feuerfuchs
     *   [Sources](https://github.com/saelo/feuerfuchs)
     *   [WriteUp](https://bruce30262.github.io/Learning-browser-exploitation-via-33C3-CTF-feuerfuchs-challenge/)
-*   Blaze 2018: blazefox
+    *   [WriteUp+Build](https://github.com/m1ghtym0/write-ups/tree/master/browser/33c3ctf-feuerfuchs)
+* Blaze 2018: blazefox
     *   [Sources](https://ctftime.org/task/6000)
     *   [WriteUp](https://devcraft.io/2018/04/27/blazefox-blaze-ctf-2018.html)
     *   [WriteUp](https://gist.github.com/niklasb/4bddc9e8f32c3bd277ed26d66d488834) (Exploit-Script)
-    *   [WriteUp](https://github.com/Jinmo/ctfs/blob/master/2018/blaze/pwn/blazefox.html) (Exploit-SCript)
+    *   [WriteUp](https://github.com/Jinmo/ctfs/blob/master/2018/blaze/pwn/blazefox.html) (Exploit-Script)
+    *   [Build+WriteUp](https://github.com/m1ghtym0/write-ups/tree/master/browser/blaze-ctf-2018-blazefox)
 * 35c3 FunFox
     *   [Sources](https://github.com/bkth/35c3ctf/tree/master/funfox) 
 ### RealWorld
+* Use-after-free in Spidermonkey (Beta 53)
+     * [Article](https://phoenhex.re/2017-06-21/firefox-structuredclone-refleak#turning-a-use-after-free-into-a-readwrite-primitive)
+     * [Talk](https://www.youtube.com/watch?v=D_9EFWYnBik)
+     * [Slides](https://grehack.fr/data/2017/slides/GreHack17_Get_the_Spidermonkey_off_your_back.pdf)
 * https://saelo.github.io/posts/firefox-script-loader-overflow.html
 
 
 
 ## Safari Pwn
 ### CTF-Challenges
-*   RealWorldCTF 2018: Engine for Neophytes
+* RealWorldCTF 2018: Engine for Neophytes
     *   [Files](http://mightym0.de/ctf/rwctf-2018/allForPlayers.zip)
-*   35c3: WebKid
+* 35c3: WebKid
     *   [Sources](https://github.com/saelo/35c3ctf/tree/master/WebKid)
     *   [WriteUp](https://github.com/LinusHenze/35C3_Writeups/tree/master/WebKid)
 ### RealWorld
 * http://www.phrack.org/papers/attacking_javascript_engines.html
-     *    [Source])(https://github.com/saelo/jscpwn)
-     *    [WriteUp](https://github.com/m1ghtym0/write-ups/tree/master/browser/CVE-2016-4622)
+     *    [Source](https://github.com/saelo/jscpwn)
+     *    [WriteUp+Build](https://github.com/m1ghtym0/write-ups/tree/master/browser/CVE-2016-4622)
+* [Fuzzing Webkit and analysis of CVE-2019-8375](https://www.inputzero.io/2019/02/fuzzing-webkit.html)
+* [CVE-2017-2446 WriteUp](https://doar-e.github.io/blog/2018/07/14/cve-2017-2446-or-jscjsglobalobjectishavingabadtime/)
 * https://saelo.github.io/posts/jsc-typedarray.slice-infoleak.html
+* https://github.com/saelo/pwn2own2018/tree/master/stage0
+* https://github.com/LinusHenze/WebKit-RegEx-Exploit
+* https://github.com/W00dL3cs/exploit_playground/tree/master/JavaScriptCore
 
 ### Hardening & Mitigations
 * [Heap-hardening](https://labs.mwrinfosecurity.com/blog/some-brief-notes-on-webkit-heap-hardening/)
@@ -310,7 +339,9 @@ $ out/Debug/ch
 ## Edge Pwn
 ### CTF-Challenges
 * Plaid 2017: chakrazy
-    *   [WriteUp](https://bruce30262.github.io/Chakrazy-exploiting-type-confusion-bug-in-ChakraCore/)
+    * [WriteUp](https://bruce30262.github.io/Chakrazy-exploiting-type-confusion-bug-in-ChakraCore/)
+* N1CTF 2018: Chakra
+     * [Files](https://github.com/Nu1LCTF/n1ctf-2018/tree/master/challenges/pwn/Chakra)
 ### RealWorld
 
 # Tools
@@ -322,6 +353,8 @@ $ out/Debug/ch
   * [int64.js](https://github.com/saelo/jscpwn/blob/master/int64.js)
   * [utils.js](https://github.com/saelo/jscpwn/blob/master/utils.js)
  
+## Debugging
+*    [shadow](https://github.com/CENSUS/shadow) jemalloc heap exploitation framework (heap allocator used by Firefox)
 # JavaScript (ECMAScript) Docs
 
 * [Types&Values](http://www.ecma-international.org/ecma-262/6.0/#sec-ecmascript-data-types-and-values)
